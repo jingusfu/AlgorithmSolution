@@ -30,9 +30,9 @@ public class Solution {
         for (int i=0; i<ransomNote.Length; i++)
         {
             ind = ransomNote[i]-'a';
-            charCount[ind]--;
-            if (charCount[ind]<0)
+            if (charCount[ind]==0)
                 return false;
+            charCount[ind]--;
         }
         return true;
     }
