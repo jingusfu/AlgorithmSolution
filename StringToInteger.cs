@@ -122,17 +122,11 @@ public class Solution {
         result = sign * result;
         if (sign==-1)
         {
-            if (result<Int32.MinValue)
-                resultInt = Int32.MinValue;
-            else 
-                resultInt = (int)result;
+            resultInt = (result<Int32.MinValue) ? Int32.MinValue : (int)result;
         }
         else 
         {
-            if (result>Int32.MaxValue)
-                resultInt = Int32.MaxValue;
-            else 
-                resultInt = (int)result;
+            resultInt = (result>Int32.MaxValue) ? Int32.MaxValue : (int)result;
         }
         return resultInt;
    }
